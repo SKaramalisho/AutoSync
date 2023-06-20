@@ -27,8 +27,8 @@ List of synchronized tasks:
 Using the Attached ZIP file, you can deploy the sync process across your AG Replicas.
 Simply follow these instructions:
 
-1.	Copy and Unzip ‘AGPrincipals_Installer_1.6.zip’, to the cluster (hosting the target AG)
-2.	In a PowerShell Window (as Administrator), execute ‘AGPrincipals_Installer_1.6.ps1’, with or without parameters: -AGName -Type -AGListener -Action
+1.	Copy and Unzip ‘AGPrincipals_Installer_x.x.zip’, to the cluster (hosting the target AG)
+2.	In a PowerShell Window (as Administrator), execute ‘AGPrincipals_Installer_x.x.ps1’, with or without parameters: -AGName -Type -AGListener -Action
 a.	If you provide parameters, the installer will start the deployment (If your AGListener differs from the AGName, you MUST provide the parameter)
 b.	If you don’t provide parameters, the installer will prompt for the AGName, and Type, then start the deployment.
 c.	-Action is used to determine if you want to (Install/Uninstall/Enable)

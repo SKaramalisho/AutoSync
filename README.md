@@ -1,4 +1,4 @@
-| SQL Server AG Synchronization | The Synchronization of | Security Principals | Server Role Memberships | Permissions |
+| SQLServer AG Synchronization | The Synchronization of | Security Principals | Server Role Memberships | Permissions |
 	
 Sam Karamalisho
 

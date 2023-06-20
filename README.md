@@ -1,8 +1,10 @@
 | SQL Server AG Synchronization | The Synchronization of | Security Principals | Server Role Memberships | Permissions |
 	
 Sam Karamalisho
-https://github.com/SKaramalisho/Automation
-https://www.linkedin.com/in/karamalishosamandar/
+
+[https://github.com/SKaramalisho/Automation](https://github.com/SKaramalisho/AutoSync)
+
+[https://www.linkedin.com/in/karamalishosamandar/](https://www.linkedin.com/in/karamalishosamandar/)
 
 List of synchronized tasks:
 

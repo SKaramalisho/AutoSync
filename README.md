@@ -18,7 +18,7 @@ If the process identifies adjustments, on the Primary Replica, it will adjust th
 The audit records, on the Primary Replica, can be used to "Undo" intentional (or unintentional) changes to security objects (See #Audit and Rollback).
 
 
-# List of synchronized tasks:
+# List of Synchronized Tasks:
 
 
 •	Login Creation (SQL/Windows/Win Group)

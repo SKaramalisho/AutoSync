@@ -1,5 +1,6 @@
 # Intro 
 
+
 | SQLServer AG Synchronization | The Synchronization of | Security Principals | Server Role Memberships | Permissions |
 	
 Sam Karamalisho
@@ -8,7 +9,17 @@ Sam Karamalisho
 
 (https://www.linkedin.com/in/karamalishosamandar/)
 
+
+
+This process periodically identifies Logins, Login Attributes, Login Role Memberships, and Login Permissions, on Primary AG replicas.
+Leveraging tables within an AG Database, "AGPrincipals_$AG", the dataset is synchronized to all Secondary AG replicas.
+If the Secondary AG Replica differs, for any of the identified security objects, it will make the necessary adjustments (to match the Primary).
+If the process identifies adjustments, on the Primary Replica, it will adjust the working dataset, and audit the historical item.
+The audit records, on the Primary Replica, can be used to "Undo" intentional (or unintentional) changes to security objects (See #Audit and Rollback).
+
+
 # List of synchronized tasks:
+
 
 •	Login Creation (SQL/Windows/Win Group)
 
@@ -41,6 +52,7 @@ Sam Karamalisho
 
 # Install Instructions
 
+
 Using the Attached ZIP file, you can deploy the sync process across your AG Replicas.
 Simply follow these instructions:
 
@@ -57,7 +69,9 @@ NOTE: If you select WHITELIST or BLACKLIST, you must update the associated table
 
 Once updated, and ready to enable, rerun the script with -Action “Enable” This can be circumvented with the $SkipEnablementSafetyCheck (great caution is needed here, as logins will begin to sync immediately, and may lead to unintentional changes on secondary replicas).
 
+
 # Validation and Testing 
+
 
 Once you’ve deployed the Sync Process, you should see the following:
 1)	A Database (AGPrincipals_AGName) 
@@ -68,7 +82,9 @@ Once you’ve deployed the Sync Process, you should see the following:
 
 NOTE: If changes are applied to the secondary replicas, the changes will be logged in the job step details. 
 
+
 # PARAMETERS:
+
 
 $AG #TARGET AG NAME
  
@@ -99,7 +115,33 @@ $SkipEnablementSafetyCheck #Set to true IF you want to enable BlackList/Whitelis
 #Basic Uninstall with -AGListener specified (No prompts)
 .\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener
 
+
+# Audit and Rollback (Security Objects/Attributes/Memberships/Permissions)
+
+
+Adjustments to items, on the Primary AG Replica, will be stored in the associated _Audit tables:
+
+PrimaryPrincipalsAudit: Used to audit changes to logins and their attributes.
+
+PrimaryPermissionsAudit: Used to audit changes to server-level permissions.
+
+PrimaryRoleMembershipAudit: Used to audit changes to server role memberships.
+
+
+To rollback changes, for a login, execute the Rollback procedure, with the associated @RemovalID:
+
+Exec Rollback_CreatePrincipal_RemovalID @RemovalID = 1
+
+Exec Rollback_AddPermission_RemovalID @RemovalID = 1
+
+Exec Rollback_AddRoleMembership_RemovalID @RemovalID = 1
+
+
+#NOTE: Auditing is only enabled for targeted logins. If you're leveraging BLACKLIST/WHITELIST Sync Types, you're only including logins IN the WHITELIST table or NOT IN the BLACKLIST table.
+
+
 # FileHash:
+
 
 | Version | 1.8 |
 
@@ -108,3 +150,4 @@ $SkipEnablementSafetyCheck #Set to true IF you want to enable BlackList/Whitelis
 | Algorithm | SHA256 |
 
 | Hash | 449A2EFE0D02D0551EA0AA471309A27B7962C5076296A8D56865DD4269E88094 |
+

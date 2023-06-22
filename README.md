@@ -1,3 +1,5 @@
+# Intro 
+
 | SQLServer AG Synchronization | The Synchronization of | Security Principals | Server Role Memberships | Permissions |
 	
 Sam Karamalisho
@@ -6,7 +8,7 @@ Sam Karamalisho
 
 (https://www.linkedin.com/in/karamalishosamandar/)
 
-List of synchronized tasks:
+# List of synchronized tasks:
 
 •	Login Creation (SQL/Windows/Win Group)
 •	Login Removal (SQL/Windows/Win Group)
@@ -24,6 +26,8 @@ List of synchronized tasks:
 •	Revoke Server Permission (SQL/Windows/Win Group)
 
 
+# Install Instructions
+
 Using the Attached ZIP file, you can deploy the sync process across your AG Replicas.
 Simply follow these instructions:
 
@@ -37,8 +41,7 @@ d.	-Frequency can also be passed, to change the job execution frequency (in seco
 NOTE: If you select WHITELIST or BLACKLIST, you must update the associated table, before enabling jobs (PrimaryPrincipals_Blacklist or PrimaryPrincipals_Whitelist)
 Once updated, and ready to enable, rerun the script with -Action “Enable”
 
-Validation and Testing
- 
+# Validation and Testing 
 
 Once you’ve deployed the Sync Process, you should see the following:
 1)	A Database (AGPrincipals_AGName) 
@@ -51,36 +54,31 @@ NOTE: If changes are applied to the secondary replicas, the changes will be logg
 
 # PARAMETERS:
 
-# TARGET AG NAME
+#TARGET AG NAME
 	$AG
-# Desired Sync Type
+#Desired Sync Type
 	$Type 
-# AG Listener Name (Required if different from AG Name)
+#AG Listener Name (Required if different from AG Name)
 	$AGListener
-# Frequency of the sync job (10 second default)
+#Frequency of the sync job (10 second default)
 	$Frequency
-# Desired Action (Install/Uninstall/Enable)
+#Desired Action (Install/Uninstall/Enable)
 	$Action
-# File "path\name.txt" containing logins to insert into the Blacklist or Whitelist tables (Single column no headers)
+#File "path\name.txt" containing logins to insert into the Blacklist or Whitelist tables (Single column no headers)
 	$InputFile
-# Set to true IF you want to enable BlackList/Whitelist jobs immediately, without manual verification
+#Set to true IF you want to enable BlackList/Whitelist jobs immediately, without manual verification
 	$SkipEnablementSafetyCheck
 
 # EXAMPLES:
 
-# Basic Interactive Install (Script will prompt for values)
+#Basic Interactive Install (Script will prompt for values)
 .\AGPrincipals_Installer_1.8.ps1
 
-# Non-Interactive Install (Installs a WHITELIST sync, specifies a different listener, inserts values from file, auto-enables jobs)
+#Non-Interactive Install (Installs a WHITELIST sync, specifies a different listener, inserts values from file, auto-enables jobs)
 .\AGPrincipals_Installer_1.8.ps1 -Action Install -AG POCAG2 -AGListener POCAG2Listener -Type WHITELIST -SkipEnablementSafetyCheck True -InputFile "C:\DL\InputFile.txt"
 
-# Basic Uninstall (No prompts)
+#Basic Uninstall (No prompts)
 .\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG1
 
-# Basic Uninstall with -AGListener specified (No prompts)
+#Basic Uninstall with -AGListener specified (No prompts)
 .\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener
-
-
-
-
-

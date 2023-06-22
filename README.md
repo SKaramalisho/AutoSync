@@ -50,8 +50,9 @@ a.	If you provide parameters, the installer will start the deployment (If your A
 b.	If you don’t provide parameters, the installer will prompt for the required parameters, then start the deployment.
 c.	Examples are listed in the "# EXMAPLES:" section (below)
 
-NOTE: If you select WHITELIST or BLACKLIST, you must update the associated table, before enabling jobs (PrimaryPrincipals_Blacklist or PrimaryPrincipals_Whitelist)
-Once updated, and ready to enable, rerun the script with -Action “Enable”
+NOTE: If you select WHITELIST or BLACKLIST, you must update the associated table, before enabling jobs (PrimaryPrincipals_Blacklist or PrimaryPrincipals_Whitelist) You can stage a text file, to insert a list of logins, and apply them with the $InputFile parameter. 
+
+Once updated, and ready to enable, rerun the script with -Action “Enable” This can be circumvented with the $SkipEnablementSafetyCheck (great caution is needed here, as logins will begin to sync immediately, and may lead to unintentional changes on secondary replicas).
 
 # Validation and Testing 
 

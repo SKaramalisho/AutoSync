@@ -46,8 +46,11 @@ Simply follow these instructions:
 
 1.	Copy and Unzip ‘AGPrincipals_Installer_x.x.zip’, to the cluster (hosting the target AG)
 2.	In a PowerShell Window (as Administrator), execute ‘AGPrincipals_Installer_x.x.ps1’, with or without parameters: (See Parameters listed in the "# PARAMETERS:" section (below))
+
 a.	If you provide parameters, the installer will start the deployment (If your AGListener differs from the AGName, you MUST provide the parameter)
+
 b.	If you don’t provide parameters, the installer will prompt for the required parameters, then start the deployment.
+
 c.	Examples are listed in the "# EXMAPLES:" section (below)
 
 NOTE: If you select WHITELIST or BLACKLIST, you must update the associated table, before enabling jobs (PrimaryPrincipals_Blacklist or PrimaryPrincipals_Whitelist) You can stage a text file, to insert a list of logins, and apply them with the $InputFile parameter. 

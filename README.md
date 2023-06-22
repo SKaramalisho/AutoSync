@@ -69,18 +69,25 @@ NOTE: If changes are applied to the secondary replicas, the changes will be logg
 
 #TARGET AG NAME
 	$AG
+ 
 #Desired Sync Type
 	$Type 
+ 
 #AG Listener Name (Required if different from AG Name)
 	$AGListener
+ 
 #Frequency of the sync job (10 second default)
 	$Frequency
+ 
 #Desired Action (Install/Uninstall/Enable)
 	$Action
+ 
 #File "path\name.txt" containing logins to insert into the Blacklist or Whitelist tables (Single column no headers)
 	$InputFile
+ 
 #Set to true IF you want to enable BlackList/Whitelist jobs immediately, without manual verification
 	$SkipEnablementSafetyCheck
+ 
 
 # EXAMPLES:
 

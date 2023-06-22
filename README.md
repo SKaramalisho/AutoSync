@@ -48,3 +48,39 @@ Once you’ve deployed the Sync Process, you should see the following:
 
 
 NOTE: If changes are applied to the secondary replicas, the changes will be logged in the job step details. 
+
+# PARAMETERS:
+
+# TARGET AG NAME
+	$AG
+# Desired Sync Type
+	$Type 
+# AG Listener Name (Required if different from AG Name)
+	$AGListener
+# Frequency of the sync job (10 second default)
+	$Frequency
+# Desired Action (Install/Uninstall/Enable)
+	$Action
+# File "path\name.txt" containing logins to insert into the Blacklist or Whitelist tables (Single column no headers)
+	$InputFile
+# Set to true IF you want to enable BlackList/Whitelist jobs immediately, without manual verification
+	$SkipEnablementSafetyCheck
+
+# EXAMPLES:
+
+# Basic Interactive Install (Script will prompt for values)
+.\AGPrincipals_Installer_1.8.ps1
+
+# Non-Interactive Install (Installs a WHITELIST sync, specifies a different listener, inserts values from file, auto-enables jobs)
+.\AGPrincipals_Installer_1.8.ps1 -Action Install -AG POCAG2 -AGListener POCAG2Listener -Type WHITELIST -SkipEnablementSafetyCheck True -InputFile "C:\DL\InputFile.txt"
+
+# Basic Uninstall (No prompts)
+.\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG1
+
+# Basic Uninstall with -AGListener specified (No prompts)
+.\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener
+
+
+
+
+

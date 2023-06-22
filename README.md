@@ -45,11 +45,10 @@ Using the Attached ZIP file, you can deploy the sync process across your AG Repl
 Simply follow these instructions:
 
 1.	Copy and Unzip ‘AGPrincipals_Installer_x.x.zip’, to the cluster (hosting the target AG)
-2.	In a PowerShell Window (as Administrator), execute ‘AGPrincipals_Installer_x.x.ps1’, with or without parameters: -AGName -Type -AGListener -Action
+2.	In a PowerShell Window (as Administrator), execute ‘AGPrincipals_Installer_x.x.ps1’, with or without parameters: (See Parameters listed in the "# PARAMETERS:" section (below))
 a.	If you provide parameters, the installer will start the deployment (If your AGListener differs from the AGName, you MUST provide the parameter)
-b.	If you don’t provide parameters, the installer will prompt for the AGName, and Type, then start the deployment.
-c.	-Action is used to determine if you want to (Install/Uninstall/Enable)
-d.	-Frequency can also be passed, to change the job execution frequency (in seconds) default is 10 seconds.
+b.	If you don’t provide parameters, the installer will prompt for the required parameters, then start the deployment.
+c.	Examples are listed in the "# EXMAPLES:" section (below)
 
 NOTE: If you select WHITELIST or BLACKLIST, you must update the associated table, before enabling jobs (PrimaryPrincipals_Blacklist or PrimaryPrincipals_Whitelist)
 Once updated, and ready to enable, rerun the script with -Action “Enable”

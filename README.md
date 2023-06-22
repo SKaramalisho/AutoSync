@@ -11,18 +11,31 @@ Sam Karamalisho
 # List of synchronized tasks:
 
 •	Login Creation (SQL/Windows/Win Group)
+
 •	Login Removal (SQL/Windows/Win Group)
+
 •	SID Mismatches (SQL Auth)
+
 •	Password Changes/Mismatches (SQL Auth)
+
 •	Login Renames/Mismatches (SQL Auth)
+
 •	Check Policy Changes (SQL Auth)
+
 •	Check Expiration Changes (SQL Auth)
+
 •	Password Changes (SQL Auth)
+
 •	Login Enablement (SQL/Windows/Win Group)
+
 •	Login Disablement (SQL/Windows/Win Group)
+
 •	Add Server Role Membership (SQL/Windows/Win Group)
+
 •	Remove Server Role Membership (SQL/Windows/Win Group)
+
 •	Grant Server Permission (SQL/Windows/Win Group)
+
 •	Revoke Server Permission (SQL/Windows/Win Group)
 
 

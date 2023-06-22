@@ -98,3 +98,10 @@ $SkipEnablementSafetyCheck #Set to true IF you want to enable BlackList/Whitelis
 
 #Basic Uninstall with -AGListener specified (No prompts)
 .\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener
+
+# FileHash:
+
+| Version | 1.8 |
+| Files | AGPrincipals_Installer_1.8.ps1 |
+| Algorithm | SHA256 |
+| Hash | 6F4B287293FADC45766DED47926480AC295A859EFCD3BAED233F589F20885C92 |

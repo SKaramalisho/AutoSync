@@ -102,6 +102,9 @@ $SkipEnablementSafetyCheck #Set to true IF you want to enable BlackList/Whitelis
 # FileHash:
 
 | Version | 1.8 |
+
 | Files | AGPrincipals_Installer_1.8.ps1 |
+
 | Algorithm | SHA256 |
+
 | Hash | 6F4B287293FADC45766DED47926480AC295A859EFCD3BAED233F589F20885C92 |

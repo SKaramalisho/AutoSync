@@ -63,7 +63,7 @@ Simply follow these instructions:
 
 	b.	If you don’t provide parameters, the installer will prompt for the required parameters, then start the deployment. (If your AGListener differs from the AGName, you MUST provide the $AGListener parameter)
 
-	c.	Examples are listed in the "# EXMAPLES:" section (below)
+	c.	Examples are listed in the "# EXAMPLES:" section (below)
 
 NOTE: If you select WHITELIST or BLACKLIST, you must update the associated table, before enabling jobs (PrimaryPrincipals_Blacklist or PrimaryPrincipals_Whitelist) You can stage a text file, to insert a list of logins, and apply them with the $InputFile parameter. 
 

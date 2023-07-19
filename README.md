@@ -1,9 +1,10 @@
 # Intro 
 
 
-| SQLServer AG Synchronization | The Synchronization of | Security Principals | Server Role Memberships | Permissions |
+| SQLServer AG Synchronization | Security Principals | Server Role Memberships | Permissions |
 	
-Sam Karamalisho
+Design and Development: Sam Karamalisho
+Design: Shawn Marple
 
 (https://github.com/SKaramalisho/AutoSync)
 

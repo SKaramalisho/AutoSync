@@ -52,6 +52,7 @@ The audit records, on the Primary Replica, can be used to "Undo" intentional (or
 
 # Install Instructions
 
+(This process requires the SQLServer Powershell Module - to Invoke-Sqlcmd)
 
 Using the Attached ZIP file, you can deploy the sync process across your AG Replicas.
 Simply follow these instructions:
@@ -102,19 +103,19 @@ $SkipEnablementSafetyCheck #Set to true IF you want to enable BlackList/Whitelis
 
 $Contained #Set to true IF your AG is a Contained AG 
 
-# EXAMPLES:
+# EXAMPLES (Run the script as an administrator):
 
 #Basic Interactive Install (Script will prompt for values)
-.\AGPrincipals_Installer_1.8.ps1
+.\AGPrincipals_Installer_1.9.4.ps1
 
 #Non-Interactive Install (Installs a WHITELIST sync, specifies a different listener, inserts values from file, auto-enables jobs)
-.\AGPrincipals_Installer_1.8.ps1 -Action Install -AG POCAG2 -AGListener POCAG2Listener -Type WHITELIST -SkipEnablementSafetyCheck True -InputFile "C:\DL\InputFile.txt"
+.\AGPrincipals_Installer_1.9.4.ps1 -Action Install -AG POCAG2 -AGListener POCAG2Listener -Type WHITELIST -SkipEnablementSafetyCheck True -InputFile "C:\DL\InputFile.txt"
 
 #Basic Uninstall (No prompts)
-.\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG1
+.\AGPrincipals_Installer_1.9.4.ps1 -Action Uninstall -AG POCAG1
 
 #Basic Uninstall with -AGListener specified (No prompts) on a Contained Availability Group
-.\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener -Contained True
+.\AGPrincipals_Installer_1.9.4.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener -Contained True
 
 
 # Audit and Rollback (Security Objects/Attributes/Memberships/Permissions)

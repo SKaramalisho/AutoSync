@@ -99,7 +99,8 @@ $Action #Desired Action (Install/Uninstall/Enable)
 $InputFile #File "path\name.txt" containing logins to insert into the Blacklist or Whitelist tables (Single column no headers)
  
 $SkipEnablementSafetyCheck #Set to true IF you want to enable BlackList/Whitelist jobs immediately, without manual verification
- 
+
+$Contained #Set to true IF your AG is a Contained AG 
 
 # EXAMPLES:
 
@@ -112,8 +113,8 @@ $SkipEnablementSafetyCheck #Set to true IF you want to enable BlackList/Whitelis
 #Basic Uninstall (No prompts)
 .\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG1
 
-#Basic Uninstall with -AGListener specified (No prompts)
-.\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener
+#Basic Uninstall with -AGListener specified (No prompts) on a Contained Availability Group
+.\AGPrincipals_Installer_1.8.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener -Contained True
 
 
 # Audit and Rollback (Security Objects/Attributes/Memberships/Permissions)
@@ -143,11 +144,11 @@ Exec Rollback_AddRoleMembership_RemovalID @RemovalID = 1
 # FileHash:
 
 
-| Version | 1.8 |
+| Version | 1.9.4 |
 
-| Files | AGPrincipals_Installer_1.8.ps1 |
+| Files | AGPrincipals_Installer_1.9.4.ps1 |
 
 | Algorithm | SHA256 |
 
-| Hash | 449A2EFE0D02D0551EA0AA471309A27B7962C5076296A8D56865DD4269E88094 |
+| Hash | 01D63FB590229E42A2E7DA0757454F6A561E9D8833A579C96F076318DDE9A316 |
 

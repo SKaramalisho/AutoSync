@@ -4,6 +4,7 @@
 | SQLServer AG Synchronization | Security Principals | Server Role Memberships | Permissions |
 	
 Design and Development: Sam Karamalisho
+
 Design: Shawn Marple
 
 (https://github.com/SKaramalisho/AutoSync)

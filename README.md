@@ -7,9 +7,10 @@ Design and Development: Sam Karamalisho
 
 Design: Shawn Marple
 
-(https://github.com/SKaramalisho/AutoSync)
 
-(https://www.linkedin.com/in/karamalishosamandar/)
+Repo:(https://github.com/SKaramalisho/AutoSync)
+
+Social:(https://www.linkedin.com/in/karamalishosamandar/)
 
 
 

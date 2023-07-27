@@ -109,16 +109,16 @@ $Contained #Set to true IF your AG is a Contained AG
 # EXAMPLES (Run the script as an administrator):
 
 #Basic Interactive Install (Script will prompt for values)
-.\AGPrincipals_Installer_1.9.4.ps1
+.\AGPrincipals_Installer_1.9.5.ps1
 
 #Non-Interactive Install (Installs a WHITELIST sync, specifies a different listener, inserts values from file, auto-enables jobs)
-.\AGPrincipals_Installer_1.9.4.ps1 -Action Install -AG POCAG2 -AGListener POCAG2Listener -Type WHITELIST -SkipEnablementSafetyCheck True -InputFile "C:\DL\InputFile.txt"
+.\AGPrincipals_Installer_1.9.5.ps1 -Action Install -AG POCAG2 -AGListener POCAG2Listener -Type WHITELIST -SkipEnablementSafetyCheck True -InputFile "C:\DL\InputFile.txt"
 
 #Basic Uninstall (No prompts)
-.\AGPrincipals_Installer_1.9.4.ps1 -Action Uninstall -AG POCAG1
+.\AGPrincipals_Installer_1.9.5.ps1 -Action Uninstall -AG POCAG1
 
 #Basic Uninstall with -AGListener specified (No prompts) on a Contained Availability Group
-.\AGPrincipals_Installer_1.9.4.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener -Contained True
+.\AGPrincipals_Installer_1.9.5.ps1 -Action Uninstall -AG POCAG2 -AGListener POCAG2Listener -Contained True
 
 
 # Audit and Rollback (Security Objects/Attributes/Memberships/Permissions)
@@ -148,11 +148,11 @@ Exec Rollback_AddRoleMembership_RemovalID @RemovalID = 1
 # FileHash:
 
 
-| Version | 1.9.4 |
+| Version | 1.9.5 |
 
-| Files | AGPrincipals_Installer_1.9.4.ps1 |
+| Files | AGPrincipals_Installer_1.9.5.ps1 |
 
 | Algorithm | SHA256 |
 
-| Hash | 01D63FB590229E42A2E7DA0757454F6A561E9D8833A579C96F076318DDE9A316 |
+| Hash | 784D1A2419805507F8A09D5EF9F0E9E2323B0E2A4B2BE6A99E9A689293B75090 |
 
